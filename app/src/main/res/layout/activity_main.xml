@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Button: Take Image From Camera, Gallery-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inputImageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            app:icon="@drawable/baseline_add_a_photo_24"
+            android:text="Take Snap"
+            app:cornerRadius="5dp" />
+        <!--Button: Convert text from the image we took from camera-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/convertTextBtn"
+            android:layout_width="match_parent"
+            app:cornerRadius="5dp"
+            android:layout_weight="1"
+            app:icon="@drawable/baseline_document_scanner_24"
+            android:layout_marginStart="5dp"
+            android:text="Convert Text"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--ImageView: Show images we took from Camera, Gallery-->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageIv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_image_24"
+                android:adjustViewBounds="true"
+                app:strokeWidth="2dp"/>
+
+            <!--TextView: Label to show the converted text from images below-->
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Converted Text:"/>
+
+            <!--EditText: Shows the converted text, you may use TextView instead-->
+            
+            <EditText
+                android:id="@+id/convertedTextEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
