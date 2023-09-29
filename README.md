@@ -1,5 +1,5 @@
 # Snap_Seeker
-This is an app which can convert any image into recognised text.
+  Snap_Seeker app is an android based application built using Java, ML API and Android Studio, which can convert any image into recognised text.
 
 The Snap Seeker app is a powerful tool that offers a convenient solution for performing text recognition from images. 
 With this app, users can easily extract text from photos and then copy and edit it as needed. Whether you have a document, a sign, or any other text-based image, Snap Seeker can quickly analyze the content 
